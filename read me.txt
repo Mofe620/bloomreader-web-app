@@ -1,0 +1,16 @@
+BlooomReader Login info
+-----------------
+Admin:
+Email - john65@gmail.com
+Password - john
+
+Client:
+Email - andyroberts@gmail.com
+Password - andy
+
+Email - sandra24@gmail.com
+Password - sandra
+
+New Updates
+-----------
+Manage Borrowed Books

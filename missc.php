@@ -1,0 +1,1 @@
+<?php $hash = password_hash("john", PASSWORD_BCRYPT); echo $hash; ?>
