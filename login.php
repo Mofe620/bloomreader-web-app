@@ -215,7 +215,7 @@ return true;
 								</div>
 							</div>
 							<div class="control-group">
-                                <label>Verification code</label><img src="captcha.php">
+                                <label>Verification code</label><img src="./captcha.php">
                                 <input type="text"  name="vercode" maxlength="5" autocomplete="off" required style="width: 150px; height: 15px;" />&nbsp;
                             </div>        
 						</div>
