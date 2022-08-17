@@ -166,7 +166,7 @@ $sql ="DELETE from authors WHERE `ID` = '$id' ";
                                             <td><b><?php echo $author; ?></b></td>
                                             <td style="text-align: center;"><?php echo $books; ?></td>
                                             <td style="text-align: center;"><a href="edit-author.php?authid=<?php echo $authid ?>"><button class="btn btn-primary"><i class="icon-pencil "></i> Edit</button> 
-                                         	 <a href="authors.php?del=<?php echo $authid; ?>" onclick="return confirm('Are you sure you want to delete this author?');"" >  <button class="btn btn-danger"><i class="icon-trash"></i> Delete</button>
+                                         	 <a href="authors.php?del=<?php echo $authid; ?>" onclick="return confirm('Are you sure you want to delete this author?');" >  <button class="btn btn-danger"><i class="icon-trash"></i> Delete</button>
                                          	</td>
                                         </tr>
                                     </tbody>

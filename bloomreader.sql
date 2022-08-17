@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 26, 2021 at 11:18 PM
+-- Generation Time: Aug 17, 2022 at 09:53 AM
 -- Server version: 8.0.21
 -- PHP Version: 7.3.21
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `PASSWORD` varchar(300) NOT NULL,
   `LastUpdated` date NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `admin`
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `admin_resp` (
   `Response` varchar(500) NOT NULL,
   `RespTime` date NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `admin_resp`
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `announcements` (
   `CONTENT` varchar(500) NOT NULL,
   `DATE` date NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `announcements`
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `authors` (
   `DateAdded` date NOT NULL,
   `LastUPDATED` date NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `authors`
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `books` (
   `STATUS` int NOT NULL,
   `LastUPDATED` date NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `books`
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `LastUPDATED` date NOT NULL,
   `STATUS` int NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `category`
@@ -187,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `clients` (
   `RegDATE` date NOT NULL,
   `STATUS` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `clients`
@@ -215,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `issuedbooks` (
   `ReturnDate` date NOT NULL,
   `Fine` int NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `issuedbooks`
@@ -241,7 +241,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `DateTime` date NOT NULL,
   `Status` int NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `messages`

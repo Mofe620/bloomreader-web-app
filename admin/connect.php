@@ -1,17 +1,28 @@
- <?php
+<?php
 // conection file to connect web portal to database 
 
-$db_server = "localhost"; // your host
-$db_user = "root";// database username
-$db_password = ""; // database password
-$db_name ="bloomreader"; // database name
+// define() is used to create constants
+// define("DB_HOST", "localhost");// your host
+// define("DB_USER", "root");// database username
+// define("DB_PASS", "");// database password
+// define("DB_NAME", "bloomreader");// database name
 
-// Create connection
-$conn = new mysqli($db_server, $db_user, $db_password, $db_name);
+// Create connection NOTE: Always in this order
+// $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+// Because of ClearDB with Heroku
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$conn = new mysqli($server, $username, $password, $db);
 
 // Check connection or produce error
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-//echo "Connected successfully";
+//else {echo "Connected successfully";}
 ?>
