@@ -1,2 +1,3 @@
 read me.txt
-vendor/*
+.vendor
+.vendor/*
