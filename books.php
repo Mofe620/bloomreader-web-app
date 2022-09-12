@@ -27,6 +27,11 @@ $msg = "";
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
+    <style>
+        .module-body {
+            overflow: scroll !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -47,54 +52,13 @@ $msg = "";
                         <!--/.sidebar-->
 				</div><!--/.span3-->
 
-
-				<div class="span9">
-					<div class="content">
-
-						<div class="module">
-							<div class="module-head">
-								<h3>News Feed</h3>
-							</div>
-							<div class="module-body">
-								<div class="stream-composer media">
-									<a href="#" class="media-avatar medium pull-left">
-										<img src="images/user.png">
-									</a>
-									<div class="media-body">
-										<div class="row-fluid">
-											<textarea class="span12" style="height: 70px; resize: none;"></textarea>
-										</div>
-										<div class="clearfix">
-											<a href="#" class="btn btn-primary pull-right">
-												Update Status
-											</a>
-											<a href="#" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Upload a photo">
-												<i class="icon-camera shaded"></i>
-											</a>
-											<a href="#" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Upload a video">
-												<i class="icon-facetime-video shaded"></i>
-											</a>
-											<a href="#" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Pin your location">
-												<i class="icon-map-marker shaded"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div><!--/.module-body-->
-						</div><!--/.module-->
-
-					</div><!--/.content-->
-				</div><!--/.span9-->
-
-
-
 				<div class="span9">
                     <div class="content">
                         <div class="module">
                             <div class="module-head">
                                 <h3>Search Books in Library</h3>
                             </div>
-                            <div class="module-body table">
+                            <div class="module-body">
                                 <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped"
                                     width="100%">
                                     <thead>
@@ -148,11 +112,7 @@ $msg = "";
 	</div><!--/.wrapper-->
 
 	<div class="footer">
-		<div class="container">
-			 
-
-			<b class="copyright">&copy; 2014 BloomReader - EGrappler.com </b> All rights reserved.
-		</div>
+		
 	</div>
 
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

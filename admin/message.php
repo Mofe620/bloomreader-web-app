@@ -87,8 +87,7 @@ $sql ="INSERT into announcements (`ADMIN`, `SUBJECT`, `CONTENT`, `DATE`)
                             <div class="module">
                                 <form action="" method="post" enctype="multipart/form-data">
                                     <div class="module-head">
-                                        <h3>BROADCAST ANNOUNCEMENT</h3>
-                                        <span class=""><em>to all clients</em></span><br>
+                                        <h3>BROADCAST ANNOUNCEMENT <em>to all readers</em></h3>
                                     </div>
                                     <div class="module-body">
                                         <div class="stream-composer media">
@@ -233,9 +232,7 @@ $sql ="INSERT into announcements (`ADMIN`, `SUBJECT`, `CONTENT`, `DATE`)
         </div>
         <!--/.wrapper-->
         <div class="footer">
-            <div class="container">
-                <b class="copyright">&copy; 2014 BloomReader - EGrappler.com </b>All rights reserved.
-            </div>
+            
         </div>
         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
         <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>

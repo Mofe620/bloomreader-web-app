@@ -253,9 +253,7 @@ $sql2 ="UPDATE clients SET `PASSWORD` = '$hash', `LastUPDATED` = NOW() WHERE ID 
     </div>
     <!--/.wrapper-->
     <div class="footer">
-        <div class="container">
-            <b class="copyright">&copy; 2014 BloomReader - EGrappler.com </b>All rights reserved.
-        </div>
+        
     </div>
     <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>

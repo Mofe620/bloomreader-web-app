@@ -46,6 +46,11 @@ $sql ="DELETE from category WHERE `ID` = '$id' ";
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
+    <style>
+        .module-body {
+            overflow: scroll !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -192,11 +197,7 @@ $sql ="DELETE from category WHERE `ID` = '$id' ";
 	</div><!--/.wrapper-->
 
 	<div class="footer">
-		<div class="container">
-			 
-
-			<b class="copyright">&copy; 2014 BloomReader - EGrappler.com </b> All rights reserved.
-		</div>
+		
 	</div>
 
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

@@ -11,7 +11,6 @@ header('location:login.php');
     $fullname=$_SESSION['fullname'];
     $username=$_SESSION['username'];
     $email=$_SESSION['admin'];
-    $pnumber=$_SESSION['pnumber'];
     $msg = "";
 
 // EDIT PROFILE
@@ -118,7 +117,6 @@ $sql2 ="UPDATE admin SET `PASSWORD` = '$hash', `LastUPDATED` = NOW() WHERE ID = 
                                                while($row = mysqli_fetch_assoc($result)) { 
                                                     $_SESSION['fullname'] =$row['FULLNAME'];
                                                     $_SESSION['username'] =$row['USERNAME'];
-                                                    $_SESSION['pnumber'] =$row['PNUMBER'];
                                                     $_SESSION['adminid']= $row['ID'];
                                                     $_SESSION['admin']= $row['EMAIL'];
                                                     $adminid=$row['ID'];
@@ -138,7 +136,6 @@ $sql2 ="UPDATE admin SET `PASSWORD` = '$hash', `LastUPDATED` = NOW() WHERE ID = 
                                         <p class="profile-brief">
                                             <ul class="unstyled">
                                                 <li><strong>Name:</strong> <?php echo $fullname; ?></li>
-                                                <li><strong>Mobile:</strong> <?php echo $pnumber; ?></li>
                                                 <li><strong>Email:</strong> <?php echo $email; ?></li>
                                             </ul>
                                         </p>
@@ -177,12 +174,6 @@ $sql2 ="UPDATE admin SET `PASSWORD` = '$hash', `LastUPDATED` = NOW() WHERE ID = 
                                             <div class="controls row-fluid">
                                                 <label for="lname" class="col-form-label">E-mail</label>
                                                 <input class="span12" type="email" type="email" name="email" id="emailid" placeholder="" value="<?php echo $email; ?>" required >
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <div class="controls row-fluid">
-                                                <label for="lname" class="col-form-label">Phone Number</label>
-                                                <input class="span12" type="number" name="pnumber" id="pnumber" maxlength="14" placeholder="" value="<?php echo $pnumber; ?>" required>
                                             </div>
                                         </div>
                                     </div>
@@ -244,9 +235,7 @@ $sql2 ="UPDATE admin SET `PASSWORD` = '$hash', `LastUPDATED` = NOW() WHERE ID = 
     </div>
     <!--/.wrapper-->
     <div class="footer">
-        <div class="container">
-            <b class="copyright">&copy; 2014 BloomReader - EGrappler.com </b>All rights reserved.
-        </div>
+        
     </div>
     <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>

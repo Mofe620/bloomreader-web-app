@@ -3,7 +3,7 @@ session_start();
 include ("connect.php");
 
 //restrict access to only logged in users
-if(strlen($_SESSION['email'])==0){ 
+if(strlen($_SESSION['userid'])==0){ 
 header('location:login.php');
 }
 
@@ -28,6 +28,11 @@ $msg = "";
         <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
         <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
             rel='stylesheet'>
+    <style>
+        .module-body.table {
+            overflow: scroll !important;
+        }
+    </style>
     </head>
     <body>
         <!-- navbar -->
@@ -66,16 +71,16 @@ $msg = "";
                                     </a><a href="#" class="btn-box big span4"><i class="icon-book"></i><b><?php echo $notReturned; ?></b>
                                         <p class="text-muted">
                                             Books not Returned</p>
-                                    </a><a href="#" class="btn-box big span4"><i class="icon-money"></i><b>15,152</b>
+                                    </a><a href="#" class="btn-box big span4"><i class="icon-money"></i><b>15</b>
                                         <p class="text-muted">
-                                            Total Fine</p>
+                                            Total Credits</p>
                                     </a>
                                 </div>
                                 
                             </div>
                             <!--/#btn-controls-->
                             
-                            <div class="">
+                            <div class="alert">
                                 <?php
                                     $sql = "SELECT * from announcements order by `ID` desc";
                                     $result = $conn->query($sql);
@@ -91,8 +96,15 @@ $msg = "";
                             </div>
 
                             <div class="module">
+                                <?php
+                                    $serial = 1;
+                                    $sql = "SELECT books.BookName, books.ISBN, issuedbooks.DateIssued, issuedbooks.DueDate, issuedbooks.ReturnStatus FROM ISSUEDBOOKS join CLIENTS on issuedbooks.ClientID = clients.ID join BOOKS on issuedbooks.BookID = books.ID WHERE clients.ID = '$id' 
+                                        order by issuedbooks.ID ";
+                                    $result = $conn->query($sql);
+                                    $count = mysqli_num_rows($result);
+                                ?>
                                 <div class="module-head">
-                                    <h3>Borrowed Books</h3>
+                                    <h3>Borrowed Books {<?php echo $count ?>}</h3>
                                 </div>
                                 <div class="module-body table">
                                     <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped"
@@ -109,16 +121,12 @@ $msg = "";
                                         </thead>
 
                                         <?php
-                                            $serial = 1;
-                                            $sql = "SELECT books.BookName, books.ISBN, issuedbooks.DateIssued, issuedbooks.DueDate, issuedbooks.ReturnStatus FROM ISSUEDBOOKS join CLIENTS on issuedbooks.ClientID = clients.ID join BOOKS on issuedbooks.BookID = books.ID WHERE clients.ID = '$id' 
-                                                order by issuedbooks.ID ";
-                                            $result = $conn->query($sql);
                                             while($row = mysqli_fetch_assoc($result)) {
-                                                 $book =  $row['BookName'];
-                                                 $isbn =  $row['ISBN'];
-                                                 $date =  $row['DateIssued'];
-                                                 $due =  $row['DueDate'];
-                                                 $status = $row['ReturnStatus'];
+                                                $book =  $row['BookName'];
+                                                $isbn =  $row['ISBN'];
+                                                $date =  $row['DateIssued'];
+                                                $due =  $row['DueDate'];
+                                                $status = $row['ReturnStatus'];
                                         ?>
                                         <tbody>
                                             <tr class="odd gradeX">
@@ -134,7 +142,7 @@ $msg = "";
                                             </tr>
                                         </tbody>
                                         <?php $serial++;
-                                            } ?>
+                                            }?>
                                     </table>
                                 </div>
                             </div>
@@ -149,9 +157,7 @@ $msg = "";
         </div>
         <!--/.wrapper-->
         <div class="footer">
-            <div class="container">
-                <b class="copyright">&copy; 2014 BloomReader - EGrappler.com </b>All rights reserved.
-            </div>
+            
         </div>
         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
         <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
