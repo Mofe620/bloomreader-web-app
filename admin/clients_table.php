@@ -75,7 +75,7 @@ $sql ="DELETE from clients WHERE `ID` = '$id' ";
 
                         <div class="module tab-pane fade active in" id="viewClients">
                             <div class="module-head">
-                                <h3>Registered Clients</h3>
+                                <h3>Registered Readers</h3>
                             </div>
                             <div class="module-body table">
                                 <table cellpadding="0" cellspacing="0" border="0" id="dataTables-example" class="table table-bordered table-striped datatable"
@@ -133,9 +133,7 @@ $sql ="DELETE from clients WHERE `ID` = '$id' ";
 	</div><!--/.wrapper-->
 
 	<div class="footer">
-        <div class="container">
-            <b class="copyright">&copy; 2014 BloomReader - EGrappler.com </b>All rights reserved.
-        </div>
+        
     </div>
     <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>

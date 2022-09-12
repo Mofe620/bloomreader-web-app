@@ -239,28 +239,7 @@ $sql ="INSERT into messages (`ClientID`, `Subject`, `Message`, `DateTime`)
                                                 </td>
                                                 </tr>
                                         <?php  } $serial++; }?>
-
-
-                                            <tr class="unread">
-                                                <td class="cell-check">
-                                                    <input type="checkbox" class="inbox-checkbox">
-                                                </td>
-                                                <td class="cell-icon">
-                                                    <i class="icon-star"></i>
-                                                </td>
-                                                <td class="cell-author hidden-phone hidden-tablet">
-                                                    Facebook
-                                                </td>
-                                                <td class="cell-title">
-                                                    Dongi sents you a friend request!
-                                                </td>
-                                                <td class="cell-icon hidden-phone hidden-tablet">
-                                                    <i class="icon-paper-clip"></i>
-                                                </td>
-                                                <td class="cell-time align-right">
-                                                    23:58
-                                                </td>
-                                            </tr>
+                                                
                                             <tr class="unread">
                                                 <td class="cell-check">
                                                     <input type="checkbox" class="inbox-checkbox">
